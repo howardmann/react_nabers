@@ -1,5 +1,5 @@
 import React from 'react'
-import calcEnergy from '../../calculators/calcEnergy'
+import calcEnergy from '../calculators/calcEnergy'
 
 let DisplayEnergyConsumed = (props) => {
   let {state, nabers, size} = props

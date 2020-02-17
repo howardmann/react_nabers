@@ -1,6 +1,6 @@
 import React from 'react'
-import calcEnergy from '../../calculators/calcEnergy'
-import calcTargetReduction from '../../calculators/calcTargetReduction'
+import calcEnergy from '../calculators/calcEnergy'
+import calcTargetReduction from '../calculators/calcTargetReduction'
 
 let DisplayEnergySavedDollar = (props) => {
   let {state, size, nabers} = props
