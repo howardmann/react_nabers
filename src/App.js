@@ -1,18 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Inputs
+import SelectState from './inputs/SelectState'
+import SelectNabers from './inputs/SelectNabers'
+import SelectBuildingSize from './inputs/SelectBuildingSize'
+// Outputs
+import DisplayEnergyConsumed from './outputs/DisplayEnergyConsumed'
+import DisplayEnergySavedPercent from './outputs/DisplayEnergySavedPercent'
+import DisplayEnergySavedDollar from './outputs/DisplayEnergySavedDollar'
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      state: "NSW",
+      nabers: 4,
+      size: 10000
+    }
+  }
+  
+  handleChange = (e) => {
+    let change = {}
+    change[e.target.name] = e.target.value
+    this.setState(change)
+  }
+
   render() {
+    let {state, nabers, size} = this.state
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div>
+        <h1>ROI Calculator</h1>
+        <div style={{border: '1px solid hotpink'}}>
+          <h2>Inputs:</h2>
+          <SelectState state={state} handleChange={this.handleChange}/>
+          <SelectNabers nabers={nabers} handleChange={this.handleChange}/>
+          <SelectBuildingSize size={size} handleChange={this.handleChange}/>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div style={{border: '1px solid green'}}>
+          <h2>Outputs:</h2>
+          <DisplayEnergyConsumed state={state} nabers={nabers} size={size}/>
+          <DisplayEnergySavedPercent nabers={nabers}/>
+          <DisplayEnergySavedDollar state={state} nabers={nabers} size={size}/>
+        </div>
       </div>
     );
   }
