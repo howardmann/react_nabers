@@ -1,5 +1,7 @@
 import React from 'react'
 import calcEnergy from '../calculators/calcEnergy'
+import Title from '../shared/Title'
+
 
 let DisplayEnergyConsumed = (props) => {
   let {state, nabers, size} = props
@@ -7,7 +9,10 @@ let DisplayEnergyConsumed = (props) => {
   let annualEnergy = Math.round(calcEnergy({state, nabers: Number(nabers), size}),0)
   return (
     <div>
-      <h3>Energy Consumed</h3>
+      <Title 
+        title="Energy Consumed"
+        toolTip={`Based on nabers of ${nabers} and size of ${size}`}
+      />
       <p>${annualEnergy}</p>
     </div>
   )

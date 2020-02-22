@@ -1,9 +1,14 @@
 import React from 'react';
+import Title from '../shared/Title'
 
 let SelectNabers = (props) => {
   return (
     <div>
-      <h3>Select NABERS:</h3>
+      <Title 
+        title="Select NABERS"
+        toolTip="Your latest NABERS star rating. Leave as 4.0 if unknown"
+      />
+
       <input 
         name="nabers"
         type="range" 

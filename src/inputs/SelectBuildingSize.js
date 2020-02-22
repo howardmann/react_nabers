@@ -1,9 +1,15 @@
 import React from 'react'
+import Title from '../shared/Title'
+
 
 let SelectBuildingSize = (props) => {
   return (
     <div>
-      <h3>Select Building Size (sqm):</h3>
+      <Title  
+        title="Select Building Size (sqm)"
+        toolTip="Total NLA of your building"
+      />
+      
       <input 
         name="size"
         type="range" 
