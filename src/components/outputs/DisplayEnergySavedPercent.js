@@ -1,5 +1,5 @@
 import React from 'react'
-import calcTargetReduction from '../calculators/calcTargetReduction'
+import calcTargetReduction from '../../calculators/calcTargetReduction'
 
 
 let DisplayEnergySavedPercent = (props) => {

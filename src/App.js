@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // Inputs
-import SelectState from './inputs/SelectState'
-import SelectNabers from './inputs/SelectNabers'
-import SelectBuildingSize from './inputs/SelectBuildingSize'
+import SelectState from './components/inputs/SelectState'
+import SelectNabers from './components/inputs/SelectNabers'
+import SelectBuildingSize from './components/inputs/SelectBuildingSize'
 // Outputs
-import DisplayEnergyConsumed from './outputs/DisplayEnergyConsumed'
-import DisplayEnergySavedPercent from './outputs/DisplayEnergySavedPercent'
-import DisplayEnergySavedDollar from './outputs/DisplayEnergySavedDollar'
+import DisplayEnergyConsumed from './components/outputs/DisplayEnergyConsumed'
+import DisplayEnergySavedPercent from './components/outputs/DisplayEnergySavedPercent'
+import DisplayEnergySavedDollar from './components/outputs/DisplayEnergySavedDollar'
 
 class App extends Component {
   constructor(props){
